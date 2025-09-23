@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendar</title>
+</head>
+<body>
+    <center>
+    <header>
+        <h1>Agendar cita</h1>
+    </header>
+    </center>
+    
+    <center>
+        <section>
+            <p>Ingresa los datos de la cita</p>
+            <form action="agendar.html" method="post">
+            <label for="nombre">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="apellido">Apellido</label><br>
+            <input type="text" id="apellido" name="apellido" required><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="fecha">Fecha</label><br>
+            <input type="date" id="fecha" name="fecha" required><br><br>
+
+            <label for="hora">Hora</label><br>
+            <input type="time" id="hora" name="hora" required><br><br>
+
+            <label for="servicio">Servicio</label><br>
+            <select id="servicio" name="servicio" required>
+                <option value="limpieza facial">limpieza facial</option>
+                <option value="corte">corte</option>
+                <option value="manicure">manicure</option>
+                <option value="pedicure">pedicure</option>
+            </select><br><br>
+
+            <button tupe="submit">Enviar</button><br>
+            
+        </form>
+        
+        </section>
+    
+    </center>
+
+    
+</body>
+</html>
