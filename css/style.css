@@ -2,7 +2,7 @@
 h1{
     text-align:center;
     font-family: "Imperial Script",cursive;
-    font-size: 90px;
+    font-size: 70px;
     color:#6B0606;
 }
 
@@ -12,16 +12,45 @@ h1{
 }
 
 .menu ul{
+
+    display:flex;
+    align-items: center;
     list-style: none;
-    justify-content: space-around;
-    display: flex;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
 }
 
-menu ul li a{
-    text-decoration:none;
-    display: block;           
-    color: white;
+.menu ul li a {
+    color: #030000;           
+    text-decoration: none;   
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 8px 12px;
+    display: inline-block;
+    transition: opacity .2s ease;
+}
+
+.menu ul li a:hover {
+    opacity: 0.7;             
+}
+
+.menu ul .logo{
+    flex:1;
+    text-align: center;
+}
+
+.menu ul .logo img{
+    width:70px;
+    height: auto;
+}
+
+.menu ul .login{
+    margin-left: auto;
+}
+
+h2{
+    text-align: center;
+    font-family: 'a';
 }
 
