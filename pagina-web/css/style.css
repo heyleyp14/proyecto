@@ -55,26 +55,26 @@ h2{
 }
 
 .carrusel-wrapper {
-  max-width: 800px;  /* Ajusta el ancho máximo en escritorio */
-  width: 100%;       /* Siempre ocupa el 100% en pantallas pequeñas */
+  max-width: 800px; 
+  width: 100%;       
 }
 
 
 
 .custom-arrow {
-    width: 60px;   /* tamaño base más grande */
+    width: 60px;   
     height: auto;
     transition: transform 0.2s ease-in-out;
 }
 
 
-/* Ajuste de posición */
+
 .custom-prev {
-  left: -70px;   /* mueve la flecha hacia la izquierda */
+  left: -70px;   
 }
 
 .custom-next {
-  right: -70px;  /* mueve la flecha hacia la derecha */
+  right: -70px; 
 }
 .gallery-header {
   text-align: center;
@@ -82,9 +82,9 @@ h2{
 }
 
 .gallery-header h2 {
-  font-size: 36px;       /* título grande */
+  font-size: 36px;       
   font-weight: bold;
-  color: #7a1c1c;        /* color vino */
+  color: #7a1c1c;        
   margin-bottom: 10px;
   font-family: 'Abhaya Libre', serif;
 }
@@ -92,8 +92,8 @@ h2{
 .gallery-header p {
   font-size: 18px;
   color: #555;
-  max-width: 600px;      /* ancho limitado para mejor lectura */
-  margin: 0 auto;        /* centrado */
+  max-width: 600px;     
+  margin: 0 auto;      
   line-height: 1.6;
 }
 
@@ -101,7 +101,7 @@ h2{
 
 
     footer {
-    background-color: #e4c1ab; /* color de fondo suave */
+    background-color: #e4c1ab; 
     text-align: center;
     padding: 40px 20px;
     font-family: 'Inter', sans-serif;
@@ -111,7 +111,7 @@ h2{
     footer h2 {
     font-family: 'Imperial Script', cursive;
     font-size: 48px;
-    color: #7a1c1c; /* tono vino */
+    color: #7a1c1c; 
     margin: 10px 0;
     }
 
@@ -150,38 +150,39 @@ h2{
 
 
 main.container h2 {
-  font-family: 'Abhaya Libre', serif; /* o la fuente que quieras */
+  font-family: 'Abhaya Libre', serif; 
   font-size: 36px;
   font-weight: bold;
-  color: #6B0606; /* ya funciona tu color */
+  color: #6B0606; 
   margin-bottom: 15px;
 }
 
 
 main.container ul {
-  list-style-type: disc; /* Puedes cambiar a circle o square */
+  list-style-type: disc; 
   padding-left: 1.2rem;
   font-size: 1.1rem;
-  line-height: 1.8; /* Espaciado entre las líneas */
-  color: #333; /* Gris oscuro legible */
+  line-height: 1.8; 
+  color: #333; 
 }
 
 main.container ul li {
   margin-bottom: 0.5rem;
 }
 
-/* Imágenes de servicios */
+
 main.container img {
-  border-radius: 12px; /* Bordes suaves */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra elegante */
+  border-radius: 12px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
   transition: transform 0.3s ease;
 }
 
 main.container img:hover {
-  transform: scale(1.03); /* Efecto zoom suave al pasar el mouse */
+  transform: scale(1.03); 
 }
 
-/* Separación entre filas */
+
 main.container .row {
-  margin-bottom: 3rem; /* Más espacio entre cada servicio */
+  margin-bottom: 3rem; 
 }
+
