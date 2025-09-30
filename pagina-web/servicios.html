@@ -1,49 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Servicios</title>
+  <meta charset="UTF-8">
+  <title>Servicios - Stilyng NR</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Imperial Script -->
+    <link href="https://fonts.googleapis.com/css?family=Imperial+Script&display=swap" rel="stylesheet">
+
+    <!-- Abhaya Libre -->
+    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre&display=swap" rel="stylesheet">
+
+    <!-- Inter (desde rsms) -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <center>
-    <header>
-        <h1>Servicios</h1>
-    </header>
-    </center>
-    <nav>
-        <ul>
-            <li><a href="index.html"><b>Inicio</b></a></li>
-            <li><a href="servicios.html"><b>Servicios</b></a></li>
-            <li><a href="Acercade.html"><b>Acerca de</b></a></li>
-            <li><a href="Contacto.html"><b>Contacto</b></a></li>
-            <li><a href="Login.html"><b>Login</b></a></li>
-        </ul>
-    </nav>
-    <center>
-        <figure>
-            <img src="/img/img_servicios.png" alt="servicios">
-        </figure>
-    </center>
-    
-    <section>
+
+<!-- Reutilizar el menú -->
+<div class="menu">
+  <nav>
+    <ul>
+      <li><a href="index.html"><b>Inicio</b></a></li>
+      <li><a href="servicios.html"><b>Servicios</b></a></li>
+      <li><a href="Acercade.html"><b>Acerca de</b></a></li>
+      <li><a href="Contacto.html"><b>Contacto</b></a></li>
+      <li class="logo"><img src="img/logo.png" alt="Logo"></li>
+      <li class="login"><a href="Login.html"><b>Login</b></a></li>
+    </ul>
+  </nav>
+</div>
+
+<header class="text-center my-4">
+  <h1 class="my-5">Servicios</h1>
+  <figure class="banner">
+    <img src="/img/img_servicios.png" alt="Inicio" class="img-fluid w-100">
+    </figure>
+</header>
+<main class="container my-5">
+    <!-- Belleza y estética -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="img/belleza.png" alt="Belleza y estética" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
             <h2>Belleza y estética</h2>
-        <figure>
-            <img src="/img/belleza.png">
-        </figure>
-        <ul>
+            <ul>
             <li>Maquillaje social</li>
             <li>Maquillaje de novia</li>
             <li>Maquillaje artístico</li>
             <li>Depilación con cera</li>
-        </ul>
-    </section>
+            <li>Peinados</li>
+            </ul>
+        </div>
+        </div>
 
-    <section>
+        <!-- Cabello -->
+        <div class="row align-items-center mb-5">
+        <div class="col-md-6 order-md-2">
+            <img src="img/cabello.png" alt="Cabello" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
             <h2>Cabello</h2>
-        <figure>
-            <img src="/img/cabello.png">
-        </figure>
-        <ul>
+            <ul>
             <li>Corte</li>
             <li>Cepillado</li>
             <li>Planchado</li>
@@ -51,65 +78,75 @@
             <li>Tratamiento capilar</li>
             <li>Tinte</li>
             <li>Peinados</li>
-        </ul>
-    </section>
+            </ul>
+        </div>
+        </div>
 
-    <section>
+        <!-- Cuidado de uñas -->
+        <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="img/uñas.png" alt="Cuidado de uñas" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
             <h2>Cuidado de uñas</h2>
-        <figure>
-            <img src="/img/uñas.png">
-        </figure>
-        <ul>
+            <ul>
             <li>Manicure</li>
             <li>Pedicure</li>
             <li>Uñas acrílicas</li>
             <li>Uñas semipermanentes</li>
             <li>Uñas en gel</li>
-        </ul>
-    </section>
+            </ul>
+        </div>
+        </div>
 
-    <section>
-            <h2>Cuidado de facial</h2>
-        <figure>
-            <img src="/img/cuidadofacial.png">
-        </figure>
-        <ul>
+        <!-- Cuidado facial -->
+        <div class="row align-items-center mb-5">
+        <div class="col-md-6 order-md-2">
+            <img src="img/cuidadofacial.png" alt="Cuidado facial" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
+            <h2>Cuidado facial</h2>
+            <ul>
             <li>Limpieza facial</li>
             <li>Perfilado de cejas</li>
             <li>Lifting de pestañas</li>
             <li>Pestañas punto a punto</li>
             <li>Microblading de cejas</li>
-        </ul>
-    </section>
+            </ul>
+        </div>
+        </div>
 
-    <section>
-            <h2>Barberia</h2>
-        <figure>
-            <img src="/img/barberia.png">
-        </figure>
-        <ul>
+        <!-- Barbería -->
+        <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="img/barberia.png" alt="Barbería" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h2>Barbería</h2>
+            <ul>
             <li>Corte</li>
             <li>Afeitado</li>
             <li>Tratamientos faciales</li>
             <li>Tratamientos capilares</li>
             <li>Coloración</li>
-        </ul>
-    </section>  
+            </ul>
+        </div>
+        </div>
+    </main>
 
-    <br>
-    <center>
-        <footer>
+<!-- Footer -->
+<footer>
         <img src="/img/logo.png">
         <br> 
         <h2>Stilyng NR</h2>
         <p>Porque tu esencia se refleja en tu estilo, la realzamos con dedicación, sofisticación y elegancia</p>
-        <a href="#">
-            <img src="/img/facebook.png">
+        <a href="#" target="_blank" class="social-icon">
+            <i class="fab fa-facebook"></i>
         </a>
-        <a href="#">
-            <img src="/img/instagram.png">
+        <a href="#" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
         </a>   
-    </center>
-    
+    </footer>
+
 </body>
 </html>

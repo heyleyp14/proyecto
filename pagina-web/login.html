@@ -1,33 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-</head>
-<body>
-    <center>
-    <header>
-        <img src="/img/login.png">
-        <h1>Login</h1>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--iconos-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body class="bg-light">
+
+    <div class="container d-flex flex-column align-items-center justify-content-start min-vh-100 mt-5">
+
+        
+        <!-- Encabezado -->
+        <header class="text-center mb-4">
+    <i class="fas fa-user-circle fa-5x mb-3" style="color:#6B0606;"></i>
+    <h1>Login</h1>
     </header>
-    </center>
-    
-    <center>
-        <section>
-        <form action="agendar.html"  method="post">
-            <label for="usuario">Usuario</label><br>
-            <input type="text" id="usuario" name="usuario" required><br><br>
 
-            <label for="clave">Contraseña</label><br>
-            <input type="password" id="clave" name="clave" required><br><br>
 
-            <button tupe="submit">Ingresar</button><br>
-            <a href="reg.html">¿Aún no tienes una cuenta?</a>
+        <!-- Tarjeta de login -->
+        <div class="card shadow-sm p-4" style="max-width: 400px; width: 100%;">
+        <form action="agendar.html" method="post">
+            
+            <!-- Usuario -->
+            <div class="mb-3">
+            <label for="usuario" class="form-label">Usuario</label>
+            <input type="text" id="usuario" name="usuario" class="form-control" required>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="mb-3">
+            <label for="clave" class="form-label">Contraseña</label>
+            <input type="password" id="clave" name="clave" class="form-control" required>
+            </div>
+
+            <!-- Botón -->
+            <div class="d-grid">
+            <button type="submit" class="btn" style="background-color: #6B0606;color:white">Ingresar</button>
+            </div>
+
+            <!-- Enlace -->
+            <div class="text-center mt-3">
+            <a href="reg.html" class="text-decoration-none">¿Aún no tienes una cuenta?</a>
+            </div>
+
         </form>
-    </section>
-    
-    </center>
+        </div>
+    </div>
 
-    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -54,3 +54,134 @@ h2{
     font-family: 'a';
 }
 
+.carrusel-wrapper {
+  max-width: 800px;  /* Ajusta el ancho máximo en escritorio */
+  width: 100%;       /* Siempre ocupa el 100% en pantallas pequeñas */
+}
+
+
+
+.custom-arrow {
+    width: 60px;   /* tamaño base más grande */
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+/* Ajuste de posición */
+.custom-prev {
+  left: -70px;   /* mueve la flecha hacia la izquierda */
+}
+
+.custom-next {
+  right: -70px;  /* mueve la flecha hacia la derecha */
+}
+.gallery-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-header h2 {
+  font-size: 36px;       /* título grande */
+  font-weight: bold;
+  color: #7a1c1c;        /* color vino */
+  margin-bottom: 10px;
+  font-family: 'Abhaya Libre', serif;
+}
+
+.gallery-header p {
+  font-size: 18px;
+  color: #555;
+  max-width: 600px;      /* ancho limitado para mejor lectura */
+  margin: 0 auto;        /* centrado */
+  line-height: 1.6;
+}
+
+
+
+
+    footer {
+    background-color: #e4c1ab; /* color de fondo suave */
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    }
+
+    footer h2 {
+    font-family: 'Imperial Script', cursive;
+    font-size: 48px;
+    color: #7a1c1c; /* tono vino */
+    margin: 10px 0;
+    }
+
+    footer p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #444;
+    }
+
+    /* Íconos sociales */
+    footer .social-icon {
+    display: inline-block;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    color: #7a1c1c;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+    }
+
+    footer .social-icon:hover {
+    background: #7a1c1c;
+    color: #fff;
+    transform: scale(1.1);
+    }
+
+
+
+/* --- Estilos de la sección de servicios --- */
+
+
+main.container h2 {
+  font-family: 'Abhaya Libre', serif; /* o la fuente que quieras */
+  font-size: 36px;
+  font-weight: bold;
+  color: #6B0606; /* ya funciona tu color */
+  margin-bottom: 15px;
+}
+
+
+main.container ul {
+  list-style-type: disc; /* Puedes cambiar a circle o square */
+  padding-left: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.8; /* Espaciado entre las líneas */
+  color: #333; /* Gris oscuro legible */
+}
+
+main.container ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Imágenes de servicios */
+main.container img {
+  border-radius: 12px; /* Bordes suaves */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra elegante */
+  transition: transform 0.3s ease;
+}
+
+main.container img:hover {
+  transform: scale(1.03); /* Efecto zoom suave al pasar el mouse */
+}
+
+/* Separación entre filas */
+main.container .row {
+  margin-bottom: 3rem; /* Más espacio entre cada servicio */
+}
