@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - Stilyng NR</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Abhaya+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+
+    <header class="menu">
+        <div class="menu-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="menu-left">
+                <ul>
+                    <li><a th:href="@{/}"><b>Inicio</b></a></li>
+                    <li><a th:href="@{/servicios}"><b>Servicios</b></a></li>
+                    <li><a th:href="@{/acercade}"><b>Acerca de</b></a></li>
+                    <li><a th:href="@{/contacto}"><b>Contacto</b></a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-logo">
+                <img th:src="@{/img/logo.png}" alt="Logo Stilyng NR">
+            </div>
+
+            <nav class="menu-right">
+                <ul>
+                    <li><a th:href="@{/login}"><b>Ingresar</b></a></li>
+                </ul>
+            </nav>
+
+            <nav class="menu-nav-responsive" id="menu-nav-responsive">
+                <ul>
+                    <li><a th:href="@{/}"><b>Inicio</b></a></li>
+                    <li><a th:href="@{/servicios}"><b>Servicios</b></a></li>
+                    <li><a th:href="@{/acercade}"><b>Acerca de</b></a></li>
+                    <li><a th:href="@{/contacto}"><b>Contacto</b></a></li>
+                    <li><a th:href="@{/login}"><b>Ingresar</b></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main class="acerca-container">
+
+        <header class="acerca-header">
+            <h1>Acerca de</h1>
+        </header>
+
+        <div class="acerca-grid">
+
+            <!-- NOSOTROS -->
+            <section class="acerca-nosotros">
+                <h2>Nosotros</h2>
+                <p>Stilyng NR fue fundado por la estilista profesional Nubia Rozo, a partir de su formación integral en
+                    el área de estética y belleza.
+                    Actualmente contamos con más de 7 años de experiencia y nuestros clientes abarcan un amplio rango de
+                    edad de entre 16 y 90 años,
+                    reflejando nuestra capacidad de adaptarnos a las necesidades únicas de cada uno.</p>
+
+                <p>En Stilyng NR nos especializamos en servicios estéticos con productos de alta calidad que transforman
+                    y renuevan tu estilo.
+                    El cuidado personal es esencial para un estilo de vida saludable, así que visítanos y sé parte de
+                    una experiencia única que no solo potencie tu imagen,
+                    sino que también te permita proyectar tu mejor versión.</p>
+            </section>
+
+            <div class="acerca-columna-derecha">
+
+                <section class="acerca-mision">
+                    <h2>Misión</h2>
+                    <p>Brindar a nuestros clientes experiencias de belleza y cuidado personal que resalten su estilo
+                        único,
+                        a través de servicios profesionales, productos de calidad y un ambiente cálido y confiable.</p>
+                </section>
+
+                <section class="acerca-vision">
+                    <h2>Visión</h2>
+                    <p>Ser un salón de belleza reconocido por transformar la imagen y confianza de nuestros clientes,
+                        destacándonos por la innovación, la elegancia y la excelencia en cada detalle.</p>
+                </section>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <br>
+
+    <footer>
+        <img th:src="@{/img/logo.png}" alt="Logo Stilyng NR">
+        <br>
+        <h2>Stilyng NR</h2>
+        <p>Porque tu esencia se refleja en tu estilo, la realzamos con dedicación, sofisticación y elegancia</p>
+        <a href="https://web.facebook.com/stilyngNR" target="_blank" class="social-icon">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/stilyngnr" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu-nav-responsive');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+            const icon = toggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+    </script>
+
+</body>
+</html>

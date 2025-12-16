@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador - Stilyng NR</title>
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/@fullcalendar/core@6.1.8/index.global.min.css" rel="stylesheet">
+<link href="https://unpkg.com/@fullcalendar/daygrid@6.1.8/index.global.min.css" rel="stylesheet">
+<link href="https://unpkg.com/@fullcalendar/timegrid@6.1.8/index.global.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Abhaya+Libre&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <img th:src="@{/img/logo.png}" alt="Stilyng NR Logo">
+            <h2>Stilyng NR</h2>
+        </div>
+
+        <ul class="menu">
+    <li><button class="menu-btn active" onclick="mostrarSeccion('panelDashboard', this)">
+        <i class="fa-solid fa-chart-line"></i> Dashboard
+    </button></li>
+
+    <li><button class="menu-btn" onclick="mostrarSeccion('panelCalendario', this)">
+        <i class="fa-solid fa-calendar-days"></i> Calendario
+    </button></li>
+
+    <li><button class="menu-btn" onclick="mostrarSeccion('panelCitas', this)">
+        <i class="fa-solid fa-calendar-check"></i> Citas
+    </button></li>
+
+    <li><button class="menu-btn" onclick="mostrarSeccion('panelClientes', this)">
+        <i class="fa-solid fa-users"></i> Clientes
+    </button></li>
+
+    <li><button class="menu-btn" onclick="mostrarSeccion('panelServicios', this)">
+        <i class="fa-solid fa-scissors"></i> Servicios
+    </button></li>
+
+    <li>
+        <a href="/logout" class="menu-btn">
+    <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión
+</a>
+
+    </li>
+</ul>
+
+
+
+        <div class="user">
+            <img th:src="@{/img/admin.jpg}" alt="Admin">
+            <div>
+                <strong>Nubia</strong><br>
+                <span>Admin</span>
+            </div>
+        </div>
+    </aside>
+<main class="content">
+    <header class="topbar">
+        <button id="btnToggleMenu" class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <input type="text" placeholder="Buscar..." class="search">
+    </header>
+
+    <!-- PANEL DASHBOARD -->
+    <section id="panelDashboard" class="panel">
+        <h2>Resumen general</h2>
+        <div class="cards">
+            <div class="card">
+                <h3 id="totalCitasMes">0</h3>
+                <p>Citas del mes</p>
+            </div>
+
+            <div class="card">
+                <h3 id="totalServicios">0</h3>
+                <p>Servicios activos</p>
+            </div>
+
+            <div class="card">
+                <h3 id="totalClientes">0</h3>
+                <p>Clientes registrados</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANEL CALENDARIO (FUERA DEL DASHBOARD) -->
+    <section id="panelCalendario" class="panel" style="display:none;">
+        <h2>Calendario</h2>
+        <div id="calendario"></div>
+    </section>
+
+    <!-- PANEL CITAS -->
+    <section id="panelCitas" class="panel" style="display: none;">
+        <h2>Lista de citas</h2>
+        <table id="tablaCitas">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Servicio</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <!-- PANEL CLIENTES -->
+    <section id="panelClientes" class="panel" style="display: none;">
+        <h2>Lista de clientes</h2>
+        <table id="tablaClientes">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <!-- PANEL SERVICIOS -->
+    <section id="panelServicios" class="panel" style="display: none;">
+        <h2>Lista de servicios</h2>
+        <button class="btn-nuevo" onclick="abrirModalServicio()">+ Nuevo servicio</button>
+        <table id="tablaServicios">
+            <thead>
+                <tr>
+                    <th>Servicio</th>
+                    <th>Duración</th>
+                    <th>Precio</th>
+                     <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    
+</main>
+
+<!-- MODAL PARA CREAR / EDITAR SERVICIO -->
+<div id="modalServicio" class="modal">
+    <div class="modal-content">
+
+        <span class="close" onclick="cerrarModalServicio()">&times;</span>
+
+        <h3 id="tituloModal" class="modal-title">Nuevo Servicio</h3>
+
+        <form id="formServicio">
+    <input type="hidden" id="idServicio">
+
+    <div class="form-row">
+        <label>Nombre:</label>
+        <input type="text" id="nombreServicio" required>
+    </div>
+
+    <div class="form-row">
+        <label>Duración (min):</label>
+        <input type="number" id="duracionServicio" min="10" required>
+    </div>
+
+    <div class="form-row">
+        <label>Precio:</label>
+        <input type="number" id="precioServicio" min="10000" required>
+    </div>
+
+    <button type="submit" class="btn-guardar">Guardar</button>
+</form>
+
+
+    </div>
+</div>
+
+
+
+<script src="https://unpkg.com/@fullcalendar/core@6.1.8/index.global.min.js"></script>
+<script src="https://unpkg.com/@fullcalendar/daygrid@6.1.8/index.global.min.js"></script>
+<script src="https://unpkg.com/@fullcalendar/timegrid@6.1.8/index.global.min.js"></script>
+
+
+<script th:src="@{/js/dashboard.js}"></script>
+
+</body>
+</html>

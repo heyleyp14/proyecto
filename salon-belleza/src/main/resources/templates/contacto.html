@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Stilyng NR</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Abhaya+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+
+    <header class="menu">
+        <div class="menu-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="menu-left">
+                <ul>
+                    <li><a th:href="@{/}"><b>Inicio</b></a></li>
+                    <li><a th:href="@{/servicios}"><b>Servicios</b></a></li>
+                    <li><a th:href="@{/acercade}"><b>Acerca de</b></a></li>
+                    <li><a th:href="@{/contacto}"><b>Contacto</b></a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-logo">
+                <img th:src="@{/img/logo.png}" alt="Logo Stilyng NR">
+            </div>
+
+            <nav class="menu-right">
+                <ul>
+                    <li><a th:href="@{/login}"><b>Ingresar</b></a></li>
+                </ul>
+            </nav>
+
+            <nav class="menu-nav-responsive" id="menu-nav-responsive">
+                <ul>
+                    <li><a th:href="@{/}"><b>Inicio</b></a></li>
+                    <li><a th:href="@{/servicios}"><b>Servicios</b></a></li>
+                    <li><a th:href="@{/acercade}"><b>Acerca de</b></a></li>
+                    <li><a th:href="@{/contacto}"><b>Contacto</b></a></li>
+                    <li><a th:href="@{/login}"><b>Ingresar</b></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contacto-container">
+        <header class="contacto-header">
+            <h1>Contacto</h1>
+        </header>
+
+        <section class="contacto-social">
+
+            <a href="https://www.instagram.com/stilyngnr/" target="_blank" class="social-icon-large">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://web.facebook.com/stilyngNR" target="_blank" class="social-icon-large">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://wa.me/573178734424" target="_blank" class="social-icon-large">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </section>
+
+        <section class="contacto-info">
+            <h2 class="direccion-titulo">Dirección</h2>
+            <p>Carrera 1 #1-27</p>
+            <p>Barrio Fátima</p>
+            <p>Villa del Rosario</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <img th:src="@{/img/logo.png}" alt="Logo Stilyng NR">
+        <br>
+        <h2>Stilyng NR</h2>
+        <p>Porque tu esencia se refleja en tu estilo, la realzamos con dedicación, sofisticación y elegancia</p>
+        <a href="https://web.facebook.com/stilyngNR" target="_blank" class="social-icon">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/stilyngnr" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu-nav-responsive');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+            const icon = toggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+    </script>
+
+</body>
+</html>

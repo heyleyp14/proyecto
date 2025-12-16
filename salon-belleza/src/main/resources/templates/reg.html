@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Stilyng NR</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-attachment: fixed !important;
+        }
+
+        /* Capa difuminada rosada */
+        .filtro-rosa {
+            position: fixed;
+            inset: 0;
+            background: rgba(255, 200, 210, 0.45);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: -1;
+        }
+
+        .card {
+            border-radius: 12px;
+        }
+
+        .btn-custom {
+            background-color: #6B0606;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #540404;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-light"
+      th:style="|background-image: url('@{/img/fondo.png}');|"
+      style="background-image: url('/img/fondo.png');">
+
+<!-- Capa difuminada -->
+<div class="filtro-rosa"></div>
+
+<!-- CONTENEDOR -->
+<div class="container d-flex align-items-center justify-content-center min-vh-100">
+
+
+    <div class="card shadow-sm p-4" style="max-width: 450px; width: 100%;">
+
+        <!-- Header dentro de la card -->
+        <header class="text-center mb-4">
+            <i class="fa-solid fa-user-plus fa-5x mb-3" style="color:#6B0606;"></i>
+            <h1>Crear cuenta</h1>
+        </header>
+
+        <!-- MENSAJE DE ERROR -->
+        <div th:if="${errorRegistro}" class="alert alert-danger" th:text="${errorRegistro}"></div>
+
+        <!-- FORMULARIO -->
+        <form th:action="@{/registro}" method="post">
+
+            <!-- Nombre -->
+            <div class="mb-3">
+                <label class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" name="nombre" required>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="mb-3">
+                <label class="form-label">Teléfono (será tu usuario)</label>
+                <input type="text" class="form-control" name="telefono" required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+                <label class="form-label">Correo electrónico (opcional)</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+
+            <!-- Contraseña -->
+            <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" name="clave" required>
+            </div>
+
+            <!-- Confirmación -->
+            <div class="mb-3">
+                <label class="form-label">Confirmar contraseña</label>
+                <input type="password" class="form-control" name="confirmarClave" required>
+            </div>
+
+            <!-- Botón -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-custom">Registrarme</button>
+            </div>
+        </form>
+
+        <!-- Link a login -->
+        <div class="text-center mt-3">
+            <span class="text-muted">¿Ya tienes cuenta?</span>
+            <a href="/login" class="fw-semibold" style="color:#6B0606;">
+                Inicia sesión
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

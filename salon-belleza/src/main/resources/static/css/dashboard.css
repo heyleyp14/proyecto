@@ -1,0 +1,570 @@
+/* =========================================================
+   STYLING NR - DASHBOARD ADMIN
+========================================================= */
+
+/* ------------------------------
+   ESTILOS BASE GENERALES
+------------------------------ */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    background-color: #f9f9f9;
+}
+
+/* =========================================================
+   SIDEBAR (MENÚ LATERAL)
+========================================================= */
+.sidebar {
+    width: 240px;
+    background-color: #f3efee;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10px;
+    transition: left 0.3s ease;
+}
+
+/* --- Logo superior --- */
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.logo h2 {
+    font-size: 30px;
+    color: #6B0606;
+    margin: 0;
+    font-family: 'Abhaya Libre', serif;
+}
+
+/* --- Menú principal --- */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 12px 25px;
+    cursor: pointer;
+    color: #333;
+    transition: background 0.2s;
+}
+
+/*.menu li.active,
+.menu li:hover {
+    background-color: #EBD3C4;
+    color: #6B0606;
+}*/
+.menu li {
+    background: transparent;   /* <- antes tenía padding y color */ 
+}
+
+
+/* --- Usuario (parte inferior del menú) --- */
+.user {
+    margin-top: auto;
+    border-top: 1px solid #ddd;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.user img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #6B0606;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-right: 12px;
+}
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+.content {
+    flex-grow: 1;
+    padding: 20px 40px;
+}
+
+/* --- Barra superior (topbar) --- */
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* --- Buscador --- */
+.search {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+/* --- Botón hamburguesa --- */
+.toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #6B0606;
+    margin-right: 15px;
+}
+
+/* =========================================================
+   SECCIONES Y PANELES
+========================================================= */
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.panel h2 {
+    color: #6B0606;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* =========================================================
+   TARJETAS DEL DASHBOARD
+========================================================= */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #6B0606;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.card p {
+    color: #555;
+    margin-top: 10px;
+}
+
+/* =========================================================
+   TABLAS (CITAS, CLIENTES, SERVICIOS)
+========================================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background-color: #f9f2f2;
+}
+
+/* =========================================================
+   RESPONSIVIDAD
+========================================================= */
+
+/* --- Tablets y móviles --- */
+@media (max-width: 992px) {
+    .sidebar {
+        position: fixed;
+        left: -240px;
+        top: 0;
+        height: 100vh;
+        z-index: 1000;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .topbar {
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}
+
+/* --- Pantallas pequeñas (celulares) --- */
+@media (max-width: 576px) {
+    .search {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    width: 100%;
+    text-align: left;
+    padding: 12px 10px;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    background: #EBD3C4;
+    color: #6B0606;
+}
+
+.menu-btn.active {
+    background: #EBD3C4;
+    color:#6B0606;
+    font-weight: bold;
+}
+.menu-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+/*#calendario {
+    margin-top: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}*/
+
+/* Fondo total del calendario */
+.fc {
+    background-color: white !important;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Encabezado superior (mes, botones) */
+.fc-toolbar {
+    background-color: #EBD3C4;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Títulos (nombre del mes) */
+.fc-toolbar-title {
+    color: #6B0606;
+    font-weight: bold;
+}
+
+/* Botones de navegación */
+.fc-button {
+    background: #EBD3C4 !important;
+    border: none !important;
+    color: white !important;
+}
+
+.fc-button:hover {
+    background: #6B0606 !important;
+}
+
+/* Eventos */
+.fc-event {
+    background-color: #f3efee !important;
+    border: none !important;
+    color:#6B0606 ;
+}
+
+/* Día actual */
+.fc-day-today {
+    background-color: #f9f9f9 !important;
+}
+/* Quitar hover en los días */
+.fc-daygrid-day:hover {
+    background: none !important;
+}
+
+.fc-button {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+.fc-button:hover {
+    background: transparent !important;
+}
+/* =============== */
+/* EVENTOS (MES)   */
+/* =============== */
+.fc-daygrid-event {
+    background-color: #f3efee !important;
+    border: none !important;
+    color: #6B0606 !important;
+}
+
+/* =============== */
+/* EVENTOS (SEMANA/DÍA) */
+/* =============== */
+.fc-timegrid-event {
+    background-color: #f3efee !important;
+    border: none !important;
+    color: #6B0606 !important;
+}
+
+/* Cuando FullCalendar usa contenedores internos */
+.fc-v-event {
+    background-color: #f3efee !important;
+    border: none !important;
+    color: #6B0606 !important;
+}
+
+/* Variante usada para eventos “block” */
+.fc-timegrid-block-event {
+    background-color: #f3efee !important;
+    border: none !important;
+    color: #6B0606 !important;
+}
+
+/* Texto dentro de eventos */
+.fc-event-title,
+.fc-event-time {
+    color: #6B0606 !important;
+}
+/* ======================= */
+/* TEXTO DE EVENTOS (GLOBAL) */
+/* ======================= */
+
+.fc-event-title {
+    color: #000 !important;       /* negro */
+    font-size: 18px !important;   /* tamaño base */
+    font-weight: 500;
+}
+
+.fc-event-time {
+    color: #000 !important;
+    font-size: 18px !important;
+}
+
+/* Quitar estilos del LI */
+.menu li {
+    padding: 0;
+}
+
+/* Hacer que el botón llene todo el LI */
+.menu-btn {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 12px 25px;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Hover */
+.menu-btn:hover {
+    background: #EBD3C4 !important;
+    color: #6B0606 !important;
+}
+
+/* Activo */
+.menu-btn.active {
+    background: #EBD3C4 !important;
+    color: #6B0606 !important;
+    font-weight: bold;
+}
+
+/* Quitar borde del focus */
+.menu-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.sidebar {
+    width: 220px;  /* Ajusta el número si quieres */
+    min-width: 220px;
+    background: #f3efee;
+    height: 99vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    overflow-y: auto; /* ← Para evitar recorte si hay contenido extra */
+}
+.content {
+    margin-left: 220px; /* Igual que el width del sidebar */
+    padding: 40px;
+    width: calc(100% - 220px);
+    overflow-x: auto; /* Para evitar que el calendario recorte */
+}
+
+
+/* ---- MODAL ---- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del modal */
+.modal-content {
+    font-size: 20px;
+    background: #fff;
+    width: 380px;
+    padding: 25px 30px;
+    border-radius: 12px;
+    position: relative;
+    animation: fadeIn 0.25s ease-in-out;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+/* Título */
+.modal-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #6B0606;
+    font-weight: bold;
+}
+
+/* Botón cerrar (X) */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #6B0606;
+    font-weight: bold;
+}
+
+.form-row {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-row input {
+    font-size: 18px;
+    width: 95%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #F9F9F9;
+}
+
+
+/* Botón guardar */
+.btn-guardar {
+    width: 100%;
+    background: #6B0606;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.btn-guardar:hover {
+    background: #510404;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.92); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+
+.menu-btn {
+    text-decoration: none;
+}
+
+.fc-daygrid-event .fc-event-title {
+    font-size: 20px !important;
+    color: #000 !important;
+}
+
+.fc-timegrid-event .fc-event-title {
+    font-size: 20px !important;
+    color: #000 !important;
+}
+
+.fc-timegrid-event .fc-event-time {
+    font-size: 20px !important;
+}
+
+
+/* ================================= */
+/* FORZAR UNA SOLA LÍNEA EN TIMEGRID */
+/* (DÍA / SEMANA) */
+/* ================================= */
+
+.fc-timegrid-event .fc-event-title-container {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.fc-timegrid-event .fc-event-title {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.fc-timegrid-event .fc-event-time {
+    white-space: nowrap !important;
+}

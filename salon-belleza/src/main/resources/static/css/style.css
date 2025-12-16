@@ -1,0 +1,401 @@
+/* =========================================================
+   ESTILOS GENERALES Y TIPOGRAFÍA
+========================================================= */
+
+h1 {
+    text-align: center;
+    font-family: "Imperial Script", cursive;
+    font-size: 70px;
+    color: #6B0606;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Abhaya Libre', serif;
+}
+
+/* =========================================================
+   MENÚ PRINCIPAL (HEADER) - CON LOGO CENTRADO Y RESPONSIVO
+========================================================= */
+
+.menu {
+    background-color: #EBD3C4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+/* Contenedor principal del menú */
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* --- Logo centrado --- */
+.menu-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-logo img {
+    width: 70px;
+    height: auto;
+}
+
+/* --- Enlaces izquierda y derecha --- */
+.menu-left ul,
+.menu-right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-left ul li a,
+.menu-right ul li a {
+    color: #030000;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    transition: opacity 0.2s ease;
+}
+
+.menu-left ul li a:hover,
+.menu-right ul li a:hover {
+    opacity: 0.7;
+    color: #6B0606;
+}
+
+/* --- Botón hamburguesa (solo móvil) --- */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #6B0606;
+}
+
+/* --- Menú desplegable en móviles --- */
+.menu-nav-responsive {
+    display: none;
+    background-color: #f5e2d6;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.menu-nav-responsive ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-nav-responsive ul li a {
+    color: #030000;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.menu-nav-responsive ul li a:hover {
+    color: #6B0606;
+}
+
+/* --- Menú visible cuando se activa el botón ☰ --- */
+.menu-nav-responsive.show {
+    display: block;
+}
+
+/* =========================================================
+   CARRUSEL Y GALERÍA
+========================================================= */
+
+.carrusel-wrapper {
+    max-width: 800px;
+    width: 100%;
+}
+
+.custom-arrow {
+    width: 60px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.custom-prev {
+    left: -70px;
+}
+
+.custom-next {
+    right: -70px;
+}
+
+/* Encabezado de galería */
+.gallery-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-header h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #7a1c1c;
+    margin-bottom: 10px;
+    font-family: 'Abhaya Libre', serif;
+}
+
+.gallery-header p {
+    font-size: 20px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   SECCIÓN DE SERVICIOS
+========================================================= */
+
+main.container h2 {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #6B0606;
+    margin-bottom: 15px;
+}
+
+main.container ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+main.container ul li {
+    margin-bottom: 0.5rem;
+}
+
+main.container img {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+main.container img:hover {
+    transform: scale(1.03);
+}
+
+main.container .row {
+    margin-bottom: 3rem;
+}
+
+/* =========================================================
+   PIE DE PÁGINA (FOOTER)
+========================================================= */
+
+footer {
+    background-color: #e4c1ab;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+footer h2 {
+    font-family: 'Imperial Script', cursive;
+    font-size: 48px;
+    color: #7a1c1c;
+    margin: 10px 0;
+}
+
+footer p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* --- Íconos sociales --- */
+footer .social-icon {
+    display: inline-block;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    color: #7a1c1c;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+footer .social-icon:hover {
+    background: #7a1c1c;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* =========================================================
+   RESPONSIVIDAD GENERAL
+========================================================= */
+
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        z-index: 1100;
+    }
+
+    .menu-left,
+    .menu-right {
+        display: none;
+    }
+
+    .menu-logo {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: 0 auto;
+    }
+}
+
+/*seccion acerca de*/
+
+
+.acerca-container {
+  padding: 50px 2.5%;
+  background-color: transparent;
+  margin: 0 auto;
+  max-width: 85%;
+  box-shadow: none;
+}
+
+.acerca-header h1 {
+  font-family: 'Imperial Script', cursive;
+  font-size: 80px;
+  color: #7a1a1a;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  padding-top: 0;
+}
+
+.acerca-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 0;
+}
+
+.acerca-nosotros h2,
+.acerca-mision h2,
+.acerca-vision h2 {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 35px;
+  color: #7a1c1c;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.acerca-nosotros p,
+.acerca-mision p,
+.acerca-vision p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.acerca-nosotros {
+  grid-column: 1;
+}
+
+
+.acerca-columna-derecha {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*seccion contacto */
+
+
+.contacto-container {
+  text-align: center;
+  padding: 60px 5%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contacto-header h1 {
+  font-family: 'Imperial Script', cursive;
+  font-size: 80px;
+  color: #7a1a1a;
+  margin-bottom: 50px;
+}
+
+.contacto-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-icon-large {
+  display: inline-block;
+  color: #000;
+  font-size: 150px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon-large:hover {
+  transform: scale(1.1);
+}
+
+.contacto-info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contacto-info .direccion-titulo {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 40px;
+  color: #7a1a1a;
+  margin-bottom: 5px;
+}
+
+.contacto-info p {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #444;
+  margin: 0 auto;
+}

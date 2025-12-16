@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Stilyng NR</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Abhaya+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+
+    <header class="menu">
+    <div class="menu-container">
+        <button class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="menu-left">
+        <ul>
+            <li><a th:href="@{/}"><b>Inicio</b></a></li>
+            <li><a th:href="@{/servicios}"><b>Servicios</b></a></li>
+            <li><a th:href="@{/acercade}"><b>Acerca de</b></a></li>
+            <li><a th:href="@{/contacto}"><b>Contacto</b></a></li>
+        </ul>
+        </nav>
+
+        <div class="menu-logo">
+        <img th:src="@{/img/logo.png}" alt="Logo Stilyng NR">
+        </div>
+
+        <nav class="menu-right">
+        <ul>
+            <li><a th:href="@{/login}"><b>Ingresar</b></a></li>
+        </ul>
+        </nav>
+
+        <nav class="menu-nav-responsive" id="menu-nav-responsive">
+        <ul>
+            <li><a th:href="@{/}"><b>Inicio</b></a></li>
+            <li><a th:href="@{/servicios}"><b>Servicios</b></a></li>
+            <li><a th:href="@{/acercade}"><b>Acerca de</b></a></li>
+            <li><a th:href="@{/contacto}"><b>Contacto</b></a></li>
+            <li><a th:href="@{/login}"><b>Ingresar</b></a></li>
+        </ul>
+        </nav>
+    </div>
+    </header>
+
+    <header class="text-center my-4">
+    <h1 class="my-5">Servicios</h1>
+    <figure class="banner">
+        <img th:src="@{/img/img_servicios.png}" alt="Inicio" class="img-fluid w-100">
+        </figure>
+    </header>
+
+    <main class="container my-5">
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+        <img th:src="@{/img/belleza.png}" alt="Belleza y estética" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+        <h2>Belleza y estética</h2>
+        <ul>
+            <li>Maquillaje social</li>
+            <li>Maquillaje de novia</li>
+            <li>Maquillaje artístico</li>
+            <li>Depilación con cera</li>
+            <li>Peinados</li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6 order-md-2">
+        <img th:src="@{/img/cabello.png}" alt="Cabello" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
+        <h2>Cabello</h2>
+        <ul>
+            <li>Corte</li>
+            <li>Cepillado</li>
+            <li>Planchado</li>
+            <li>Keratina</li>
+            <li>Tratamiento capilar</li>
+            <li>Tinte</li>
+            <li>Peinados</li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+        <img th:src="@{/img/uñas.png}" alt="Cuidado de uñas" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+        <h2>Cuidado de uñas</h2>
+        <ul>
+            <li>Manicure</li>
+            <li>Pedicure</li>
+            <li>Uñas acrílicas</li>
+            <li>Uñas semipermanentes</li>
+            <li>Uñas en gel</li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6 order-md-2">
+        <img th:src="@{/img/cuidadofacial.png}" alt="Cuidado facial" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
+        <h2>Cuidado facial</h2>
+        <ul>
+            <li>Limpieza facial</li>
+            <li>Perfilado de cejas</li>
+            <li>Lifting de pestañas</li>
+            <li>Pestañas punto a punto</li>
+            <li>Microblading de cejas</li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+        <img th:src="@{/img/barberia.png}" alt="Barbería" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+        <h2>Barbería</h2>
+        <ul>
+            <li>Corte</li>
+            <li>Afeitado</li>
+            <li>Tratamientos faciales</li>
+            <li>Tratamientos capilares</li>
+            <li>Coloración</li>
+        </ul>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+    <img th:src="@{/img/logo.png}" alt="Logo Stilyng NR">
+    <br>
+    <h2>Stilyng NR</h2>
+    <p>Porque tu esencia se refleja en tu estilo, la realzamos con dedicación, sofisticación y elegancia</p>
+    <a href="https://web.facebook.com/stilyngNR" target="_blank" class="social-icon">
+        <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/stilyngnr" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i>
+    </a>
+    </footer>
+
+    <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu-nav-responsive');
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('show');
+        const icon = toggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-xmark');
+        });
+    </script>
+
+</body>
+</html>
